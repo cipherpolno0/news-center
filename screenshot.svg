@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="920" viewBox="0 0 1200 920" role="img" aria-labelledby="title description">
+  <title id="title">ภาพตัวอย่างหน้าเว็บศูนย์ข่าวสาร</title>
+  <desc id="description">ภาพตัวอย่างหน้าเว็บข่าวภาษาไทย แสดงส่วนหัว เมนู ข่าวเด่น ข่าวประกาศ และการ์ดข่าว</desc>
+  <rect width="1200" height="920" fill="#f4f7fb"/>
+  <rect width="1200" height="174" fill="#12375b"/>
+  <text x="600" y="77" text-anchor="middle" fill="#ffffff" font-family="Noto Sans Thai, Tahoma, sans-serif" font-size="43" font-weight="700">ศูนย์ข่าวสาร</text>
+  <text x="600" y="119" text-anchor="middle" fill="#e7eef5" font-family="Noto Sans Thai, Tahoma, sans-serif" font-size="20">ติดตามเรื่องราวสำคัญ กิจกรรม และข้อมูลที่เป็นประโยชน์ได้ในที่เดียว</text>
+  <rect y="174" width="1200" height="66" fill="#ffffff"/>
+  <text x="600" y="216" text-anchor="middle" fill="#12375b" font-family="Noto Sans Thai, Tahoma, sans-serif" font-size="18" font-weight="700">หน้าแรก　　กิจกรรม　　ดาวน์โหลด　　เกี่ยวกับเรา</text>
+  <rect x="118" y="270" width="964" height="205" rx="18" fill="#fff8e8" stroke="#9a6b00" stroke-width="3"/>
+  <rect x="118" y="270" width="12" height="205" rx="6" fill="#9a6b00"/>
+  <text x="155" y="315" fill="#12375b" font-family="Noto Sans Thai, Tahoma, sans-serif" font-size="24" font-weight="700">ข่าวเด่น</text>
+  <text x="155" y="362" fill="#12375b" font-family="Noto Sans Thai, Tahoma, sans-serif" font-size="27" font-weight="700">ชุมชนร่วมมือจัดกิจกรรมพัฒนาพื้นที่สาธารณะ</text>
+  <text x="155" y="405" fill="#1d2f40" font-family="Noto Sans Thai, Tahoma, sans-serif" font-size="18">ประชาชนและหน่วยงานร่วมกันปรับปรุงสวนสาธารณะให้สะอาดและปลอดภัย</text>
+  <text x="155" y="437" fill="#1d2f40" font-family="Noto Sans Thai, Tahoma, sans-serif" font-size="18">พร้อมเปิดโอกาสให้คนในชุมชนเสนอแนวทางดูแลพื้นที่อย่างต่อเนื่อง</text>
+  <text x="120" y="529" fill="#12375b" font-family="Noto Sans Thai, Tahoma, sans-serif" font-size="26" font-weight="700">ข่าวประกาศสำคัญ</text>
+  <rect x="118" y="548" width="964" height="86" rx="14" fill="#ffffff" stroke="#dce5eb" stroke-width="2"/>
+  <circle cx="153" cy="591" r="11" fill="#9a6b00"/>
+  <text x="182" y="585" fill="#12375b" font-family="Noto Sans Thai, Tahoma, sans-serif" font-size="18" font-weight="700">ประกาศกำหนดการและข่าวสารจากหน่วยงาน</text>
+  <text x="182" y="612" fill="#46596b" font-family="Noto Sans Thai, Tahoma, sans-serif" font-size="15">ติดตามข้อมูลสำคัญและกำหนดการล่าสุดได้ที่นี่</text>
+  <text x="120" y="693" fill="#12375b" font-family="Noto Sans Thai, Tahoma, sans-serif" font-size="26" font-weight="700">ข่าวล่าสุด</text>
+  <g font-family="Noto Sans Thai, Tahoma, sans-serif">
+    <rect x="118" y="713" width="300" height="160" rx="15" fill="#ffffff" stroke="#e2e8ed" stroke-width="2"/>
+    <text x="140" y="750" fill="#12375b" font-size="18" font-weight="700">ห้องสมุดจัดกิจกรรมอ่านหนังสือ</text>
+    <text x="140" y="782" fill="#46596b" font-size="14">27 กันยายน 2569</text>
+    <text x="140" y="817" fill="#1d2f40" font-size="15">ผู้เข้าร่วมแลกเปลี่ยนเรื่องราว</text>
+    <text x="140" y="842" fill="#1d2f40" font-size="15">และฝึกทักษะการสื่อสาร</text>
+    <rect x="450" y="713" width="300" height="160" rx="15" fill="#ffffff" stroke="#e2e8ed" stroke-width="2"/>
+    <text x="472" y="750" fill="#12375b" font-size="18" font-weight="700">ตลาดชุมชนเพิ่มสินค้าท้องถิ่น</text>
+    <text x="472" y="782" fill="#46596b" font-size="14">26 กันยายน 2569</text>
+    <text x="472" y="817" fill="#1d2f40" font-size="15">ผู้ผลิตรายย่อยนำสินค้ามา</text>
+    <text x="472" y="842" fill="#1d2f40" font-size="15">ให้ประชาชนเลือกซื้อเพิ่มขึ้น</text>
+    <rect x="782" y="713" width="300" height="160" rx="15" fill="#ffffff" stroke="#e2e8ed" stroke-width="2"/>
+    <text x="804" y="750" fill="#12375b" font-size="18" font-weight="700">อาสาสมัครร่วมปลูกต้นไม้</text>
+    <text x="804" y="782" fill="#46596b" font-size="14">25 กันยายน 2569</text>
+    <text x="804" y="817" fill="#1d2f40" font-size="15">ชุมชนเพิ่มพื้นที่สีเขียว</text>
+    <text x="804" y="842" fill="#1d2f40" font-size="15">และวางแผนดูแลต้นไม้</text>
+  </g>
+</svg>
