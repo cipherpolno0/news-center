@@ -25,4 +25,3 @@
 - JavaScript (Vanilla ES6)
 - jsPDF และ html2canvas สำหรับสร้างไฟล์ PDF
 - Noto Sans Thai สำหรับแสดงผลภาษาไทยใน PDF
-# news-center
