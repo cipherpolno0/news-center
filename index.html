@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ศูนย์ข่าวสาร | ข่าวสารและกิจกรรม</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontsource-noto-sans-thai/5.3.0/400.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontsource-noto-sans-thai/5.3.0/700.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ส่วนหัวเว็บไซต์: ชื่อเว็บไซต์และคำโปรย -->
+    <header class="site-header" id="home">
+        <h1>ศูนย์ข่าวสาร</h1>
+        <p>ติดตามเรื่องราวสำคัญ กิจกรรม และข้อมูลที่เป็นประโยชน์ได้ในที่เดียว</p>
+    </header>
+
+    <!-- เมนูนำทางหลักของเว็บไซต์ -->
+    <nav class="site-nav" aria-label="เมนูหลัก">
+        <details class="mobile-menu">
+            <summary>
+                <span class="hamburger-icon" aria-hidden="true"></span>
+                <span>เมนู</span>
+            </summary>
+            <ul class="nav-list">
+                <li><a href="#home">หน้าแรก</a></li>
+                <li><a href="#activities">กิจกรรม</a></li>
+                <li><a href="#downloads">ดาวน์โหลด</a></li>
+                <li><a href="#about">เกี่ยวกับเรา</a></li>
+            </ul>
+        </details>
+    </nav>
+
+    <!-- เนื้อหาหลักของหน้าเว็บ -->
+    <main class="site-main">
+        <!-- ข่าวเด่นประจำวัน -->
+        <section class="featured-section" id="featured-news" aria-labelledby="featured-heading">
+            <h2 id="featured-heading">ข่าวเด่น</h2>
+            <article class="featured-card">
+                <h3>ชุมชนร่วมมือจัดกิจกรรมพัฒนาพื้นที่สาธารณะ</h3>
+                <p>ประชาชนและหน่วยงานในพื้นที่ร่วมกันปรับปรุงสวนสาธารณะ เพื่อให้เป็นพื้นที่พักผ่อนที่สะอาดและปลอดภัยสำหรับทุกคน กิจกรรมครั้งนี้ยังเปิดโอกาสให้คนในชุมชนได้เสนอแนวทางดูแลพื้นที่อย่างต่อเนื่อง</p>
+            </article>
+        </section>
+
+        <!-- ข่าวประกาศสำคัญ: แสดงระหว่างข่าวเด่นกับรายการข่าว -->
+        <section class="announcement-section" id="important-announcements" aria-labelledby="important-announcements-heading">
+            <h2 id="important-announcements-heading">ข่าวประกาศสำคัญ</h2>
+            <article class="announcement-card">
+                <h3>แจ้งกำหนดการกิจกรรมและการให้บริการ</h3>
+                <p>โปรดติดตามกำหนดการและรายละเอียดการเข้าร่วมกิจกรรมจากประกาศของหน่วยงานที่เกี่ยวข้อง</p>
+            </article>
+        </section>
+
+        <!-- รายการข่าวทั่วไป 8 ข่าว -->
+        <section class="news-section" id="activities" aria-labelledby="activities-heading">
+            <h2 id="activities-heading">กิจกรรมและข่าวสาร</h2>
+
+            <form class="news-search" role="search">
+                <label for="news-search-input">ค้นหาข่าวจากหัวข้อ</label>
+                <input
+                    id="news-search-input"
+                    type="search"
+                    placeholder="พิมพ์หัวข้อข่าวที่ต้องการค้นหา"
+                    autocomplete="off"
+                >
+                <p id="news-search-empty" class="news-search-empty" role="status" aria-live="polite" hidden>ไม่พบข่าวที่ค้นหา</p>
+            </form>
+
+            <article class="news-card">
+                <h3>โรงเรียนจัดกิจกรรมส่งเสริมการอ่าน</h3>
+                <time class="news-date" datetime="2026-09-27">27 กันยายน 2569</time>
+                <p class="news-summary">นักเรียนร่วมกิจกรรมอ่านหนังสือและแลกเปลี่ยนเรื่องราวที่ชื่นชอบ<br>ครูหวังช่วยสร้างนิสัยรักการอ่านและเพิ่มทักษะการสื่อสาร</p>
+                <button class="download-pdf-button" type="button">ดาวน์โหลด PDF</button>
+            </article>
+
+            <article class="news-card">
+                <h3>ตลาดชุมชนเพิ่มพื้นที่จำหน่ายสินค้าท้องถิ่น</h3>
+                <time class="news-date" datetime="2026-09-26">26 กันยายน 2569</time>
+                <p class="news-summary">ผู้จัดงานเปิดพื้นที่ให้ผู้ผลิตรายย่อยนำสินค้ามาจำหน่ายมากขึ้น<br>ประชาชนสามารถเลือกซื้ออาหารและงานฝีมือจากคนในพื้นที่</p>
+                <button class="download-pdf-button" type="button">ดาวน์โหลด PDF</button>
+            </article>
+
+            <article class="news-card">
+                <h3>อาสาสมัครร่วมปลูกต้นไม้ริมคลอง</h3>
+                <time class="news-date" datetime="2026-09-25">25 กันยายน 2569</time>
+                <p class="news-summary">อาสาสมัครและเยาวชนช่วยกันปลูกต้นไม้เพื่อเพิ่มพื้นที่สีเขียว<br>ผู้จัดกิจกรรมเตรียมติดตามการเติบโตและดูแลต้นไม้ในระยะยาว</p>
+                <button class="download-pdf-button" type="button">ดาวน์โหลด PDF</button>
+            </article>
+
+            <article class="news-card">
+                <h3>ห้องสมุดประชาชนขยายเวลาให้บริการช่วงเย็น</h3>
+                <time class="news-date" datetime="2026-09-24">24 กันยายน 2569</time>
+                <p class="news-summary">ห้องสมุดทดลองเปิดให้บริการเพิ่มในช่วงเย็นสำหรับผู้เรียนและคนทำงาน<br>ผู้ใช้บริการสามารถอ่านหนังสือและใช้พื้นที่ค้นคว้าได้สะดวกขึ้น</p>
+                <button class="download-pdf-button" type="button">ดาวน์โหลด PDF</button>
+            </article>
+
+            <article class="news-card">
+                <h3>หน่วยงานท้องถิ่นเตรียมอบรมทักษะดิจิทัลเบื้องต้น</h3>
+                <time class="news-date" datetime="2026-09-23">23 กันยายน 2569</time>
+                <p class="news-summary">หลักสูตรอบรมจะครอบคลุมการใช้งานอินเทอร์เน็ตและการสื่อสารออนไลน์<br>ผู้สนใจสามารถติดตามกำหนดการและวิธีสมัครจากประกาศของหน่วยงาน</p>
+                <button class="download-pdf-button" type="button">ดาวน์โหลด PDF</button>
+            </article>
+
+            <article class="news-card">
+                <h3>ชุมชนเปิดเวทีรับฟังความคิดเห็นเรื่องพื้นที่ส่วนกลาง</h3>
+                <time class="news-date" datetime="2026-09-22">22 กันยายน 2569</time>
+                <p class="news-summary">ชาวชุมชนร่วมเสนอแนวทางปรับปรุงพื้นที่ส่วนกลางให้ตอบโจทย์ผู้ใช้<br>ข้อคิดเห็นจะนำไปประกอบการวางแผนกิจกรรมในระยะต่อไป</p>
+                <button class="download-pdf-button" type="button">ดาวน์โหลด PDF</button>
+            </article>
+
+            <article class="news-card">
+                <h3>ศูนย์สุขภาพจัดให้ความรู้เรื่องการดูแลสุขภาพเบื้องต้น</h3>
+                <time class="news-date" datetime="2026-09-21">21 กันยายน 2569</time>
+                <p class="news-summary">ผู้เข้าร่วมรับฟังคำแนะนำเกี่ยวกับการดูแลสุขภาพในชีวิตประจำวัน<br>กิจกรรมเปิดให้ประชาชนสอบถามข้อมูลจากเจ้าหน้าที่ได้โดยตรง</p>
+                <button class="download-pdf-button" type="button">ดาวน์โหลด PDF</button>
+            </article>
+
+            <article class="news-card">
+                <h3>เยาวชนร่วมเวิร์กช็อปสร้างสรรค์สื่อชุมชน</h3>
+                <time class="news-date" datetime="2026-09-20">20 กันยายน 2569</time>
+                <p class="news-summary">ผู้เข้าร่วมฝึกเล่าเรื่องราวท้องถิ่นผ่านภาพและข้อความสั้น<br>ผลงานจากเวิร์กช็อปจะนำมาจัดแสดงในกิจกรรมของชุมชน</p>
+                <button class="download-pdf-button" type="button">ดาวน์โหลด PDF</button>
+            </article>
+        </section>
+
+        <!-- พื้นที่รวมเอกสารและไฟล์สำหรับดาวน์โหลด -->
+        <section class="downloads-section" id="downloads" aria-labelledby="downloads-heading">
+            <h2 id="downloads-heading">ดาวน์โหลด</h2>
+            <p>ขณะนี้ยังไม่มีเอกสารสำหรับดาวน์โหลด</p>
+        </section>
+    </main>
+
+    <!-- ส่วนท้ายเว็บไซต์: ข้อมูลเกี่ยวกับเราและช่องทางติดต่อ -->
+    <footer class="site-footer" id="about">
+        <section class="about-section" aria-labelledby="about-heading">
+            <h2 id="about-heading">เกี่ยวกับเรา</h2>
+            <p>ศูนย์ข่าวสารรวบรวมข่าว กิจกรรม และประกาศเพื่อเผยแพร่ข้อมูลที่เป็นประโยชน์แก่ผู้อ่าน</p>
+        </section>
+        <address class="contact-details">
+            ติดต่อเรา: <a href="mailto:info@news-center.example">info@news-center.example</a>
+        </address>
+        <p><small>ลิขสิทธิ์ &copy; 2026 ศูนย์ข่าวสาร</small></p>
+    </footer>
+    <!-- ไลบรารีสำหรับเรนเดอร์ภาษาไทยและสร้างเอกสาร PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/4.2.1/jspdf.umd.min.js" defer></script>
+    <!-- สคริปต์ค้นหาข่าวและดาวน์โหลด PDF -->
+    <script src="script.js" defer></script>
+</body>
+</html>

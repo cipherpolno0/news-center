@@ -1,0 +1,532 @@
+/* ============================== */
+/* 1. ชุดสีและค่าพื้นฐานของเว็บ */
+/* ============================== */
+:root {
+    --color-primary: #12375b;
+    --color-accent: #9a6b00;
+    --color-background: #f4f7fb;
+}
+
+/* ============================== */
+/* 2. รีเซ็ตกล่องและรูปแบบตัวอักษร */
+/* ============================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-background);
+    color: #1d2f40;
+    font-family: "Noto Sans Thai", "Leelawadee UI", Tahoma, sans-serif;
+    font-size: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+    font-size: clamp(1.35rem, 2vw, 1.75rem);
+    line-height: 1.4;
+}
+
+h3 {
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+    font-size: 1.15rem;
+    line-height: 1.5;
+}
+
+/* ============================== */
+/* 3. ส่วนหัวเว็บไซต์ */
+/* ============================== */
+.site-header {
+    padding: 2rem 1rem 1.5rem;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    text-align: center;
+}
+
+.site-header h1 {
+    margin-bottom: 0.35rem;
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.25;
+}
+
+.site-header p {
+    margin-bottom: 0;
+    color: #e7eef5;
+}
+
+/* ============================== */
+/* 4. เมนูนำทาง */
+/* ============================== */
+.site-nav {
+    position: relative;
+    z-index: 1;
+    background-color: #ffffff;
+    box-shadow: 0 0.125rem 0.5rem rgba(18, 55, 91, 0.12);
+}
+
+/* เมนูแฮมเบอร์เกอร์บนมือถือ ใช้ details เพื่อเปิด–ปิดโดยไม่ต้องใช้ JavaScript */
+.mobile-menu {
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+.mobile-menu > summary {
+    display: flex;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    padding: 0.65rem 1rem;
+    color: var(--color-primary);
+    cursor: pointer;
+    font-weight: 700;
+    list-style: none;
+}
+
+.mobile-menu > summary::-webkit-details-marker {
+    display: none;
+}
+
+.mobile-menu > summary::marker {
+    content: "";
+}
+
+.mobile-menu > summary:focus-visible {
+    outline: 0.1875rem solid var(--color-accent);
+    outline-offset: -0.1875rem;
+}
+
+.hamburger-icon {
+    position: relative;
+    display: inline-block;
+    width: 1.25rem;
+    height: 1rem;
+    flex: 0 0 1.25rem;
+    border-top: 0.125rem solid currentColor;
+    border-bottom: 0.125rem solid currentColor;
+}
+
+.hamburger-icon::after {
+    position: absolute;
+    top: calc(50% - 0.0625rem);
+    left: 0;
+    width: 100%;
+    border-top: 0.125rem solid currentColor;
+    content: "";
+}
+
+.nav-list {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+    margin: 0 auto;
+    padding: 0.5rem 1rem 0.75rem;
+    list-style: none;
+}
+
+.mobile-menu[open] > .nav-list {
+    display: flex;
+    animation: menu-slide-down 180ms ease-out both;
+}
+
+@keyframes menu-slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-0.5rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-list a {
+    display: block;
+    border-radius: 0.5rem;
+    padding: 0.65rem 1rem;
+    color: var(--color-primary);
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+.nav-list a:hover,
+.nav-list a:focus-visible {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+
+.nav-list a:focus-visible {
+    outline: 0.1875rem solid var(--color-accent);
+    outline-offset: 0.125rem;
+}
+
+/* ============================== */
+/* 5. ความกว้างและระยะห่างเนื้อหา */
+/* ============================== */
+.site-main {
+    width: calc(100% - 2rem);
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 1.35rem 0 2.5rem;
+}
+
+.featured-section,
+.announcement-section,
+.news-section,
+.downloads-section {
+    margin-bottom: 2rem;
+}
+
+/* ============================== */
+/* 6. ข่าวเด่นและข่าวประกาศสำคัญ */
+/* ============================== */
+.featured-card {
+    border: 0.125rem solid var(--color-accent);
+    border-left-width: 0.5rem;
+    border-radius: 0.9rem;
+    padding: clamp(1.5rem, 3vw, 2.25rem);
+    background-color: #fff8e8;
+    box-shadow: 0 0.5rem 1.375rem rgba(18, 55, 91, 0.12);
+}
+
+.featured-card h3 {
+    font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+}
+
+.featured-card p,
+.announcement-card p {
+    margin-bottom: 0;
+}
+
+.announcement-section {
+    border-radius: 0.9rem;
+    padding: clamp(1rem, 3vw, 1.5rem);
+    background-color: #fff4d6;
+}
+
+.announcement-section h2 {
+    color: #634200;
+}
+
+.announcement-card {
+    border-left: 0.25rem solid var(--color-accent);
+    padding: 0.15rem 0 0.15rem 1rem;
+}
+
+.announcement-card h3 {
+    color: #634200;
+}
+
+/* ============================== */
+/* 7. การ์ดรายการข่าว */
+/* ============================== */
+.news-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.news-section > h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+.news-card {
+    min-width: 0;
+    border: 0.0625rem solid #e2e8ed;
+    border-radius: 0.85rem;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    background-color: #ffffff;
+    box-shadow: 0 0.3125rem 1rem rgba(18, 55, 91, 0.1);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.news-card[hidden] {
+    display: none;
+}
+
+.news-card:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.875rem 1.75rem rgba(18, 55, 91, 0.2);
+}
+
+.news-date {
+    display: block;
+    margin-bottom: 0.65rem;
+    color: #46596b;
+    font-size: 0.9rem;
+}
+
+.news-summary {
+    margin-bottom: 0;
+}
+
+/* ============================== */
+/* 8. ส่วนดาวน์โหลด */
+/* ============================== */
+.downloads-section {
+    border: 0.0625rem solid #dce5eb;
+    border-radius: 0.85rem;
+    padding: 1.25rem;
+    background-color: #ffffff;
+}
+
+.downloads-section p {
+    margin-bottom: 0;
+}
+
+/* ============================== */
+/* 9. ส่วนท้ายเว็บไซต์และข้อมูลติดต่อ */
+/* ============================== */
+.site-footer {
+    padding: 2rem max(1rem, calc((100% - 72rem) / 2));
+    background-color: var(--color-primary);
+    color: #e7eef5;
+}
+
+.site-footer h2,
+.site-footer h3 {
+    color: #ffffff;
+}
+
+.site-footer p {
+    margin-bottom: 0.75rem;
+}
+
+.about-section {
+    max-width: 48rem;
+    margin-bottom: 1rem;
+}
+
+.contact-details {
+    margin-bottom: 1rem;
+    font-style: normal;
+}
+
+.site-footer a {
+    color: #ffffff;
+    text-underline-offset: 0.2em;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+    color: #ffd166;
+}
+
+.site-footer small {
+    color: #d4e0e8;
+}
+
+/* รูปภาพต้องหดตามพื้นที่ของ container และคงสัดส่วนเดิม */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* เพิ่มระยะหายใจด้านในของการ์ดเมื่อแสดงผลบนมือถือ */
+.news-card {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+/* ============================== */
+/* 10. ค่าพื้นฐานสำหรับมือถือ (<600px): เมนูแนวตั้งและข่าวหนึ่งคอลัมน์ */
+/* มือถือใช้ค่าพื้นฐานแบบ mobile-first ที่กำหนดไว้ด้านบน */
+/* ============================== */
+/* 11. แท็บเล็ต: หน้าจอกว้าง 600–1024px */
+/* ============================== */
+@media (min-width: 600px) and (max-width: 1024px) {
+    .site-header {
+        padding: 2.5rem 1.5rem 2rem;
+    }
+
+    .mobile-menu > summary {
+        display: none;
+    }
+
+    .mobile-menu > .nav-list {
+        display: flex;
+        max-width: 72rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-list a {
+        padding: 0.55rem 1rem;
+    }
+
+    .site-main {
+        width: calc(100% - 2.5rem);
+        padding-top: 2rem;
+    }
+
+    .news-section {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .news-card {
+        padding-right: clamp(1.25rem, 3vw, 2rem);
+        padding-left: clamp(1.25rem, 3vw, 2rem);
+    }
+}
+
+/* ============================== */
+/* 12. เดสก์ท็อป: หน้าจอกว้างกว่า 1024px */
+/* ============================== */
+@media (min-width: 1025px) {
+    .site-header {
+        padding: 2.75rem 1.5rem 2.25rem;
+    }
+
+    .mobile-menu > summary {
+        display: none;
+    }
+
+    .mobile-menu > .nav-list {
+        display: flex;
+        max-width: 72rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-list a {
+        padding: 0.55rem 1rem;
+    }
+
+    .site-main {
+        padding-top: 2.25rem;
+    }
+
+    .news-section {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .news-card {
+        padding-right: clamp(1.25rem, 3vw, 2rem);
+        padding-left: clamp(1.25rem, 3vw, 2rem);
+    }
+}
+
+/* ลดการเคลื่อนไหวสำหรับผู้ใช้ที่ตั้งค่าระบบไว้ */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        transform: none !important;
+    }
+}
+
+/* ============================== */
+/* 13. ช่องค้นหาและปุ่มดาวน์โหลด PDF */
+/* ============================== */
+.news-search {
+    display: grid;
+    grid-column: 1 / -1;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.news-search label {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.news-search input {
+    width: 100%;
+    min-width: 0;
+    border: 0.0625rem solid #9aa9b7;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    background-color: #ffffff;
+    color: #1d2f40;
+    font: inherit;
+}
+
+.news-search input:focus-visible {
+    outline: 0.1875rem solid var(--color-accent);
+    outline-offset: 0.125rem;
+}
+
+.news-search-empty {
+    margin: 0;
+    color: #7a2e2e;
+    font-weight: 700;
+}
+
+.download-pdf-button {
+    margin-top: 1rem;
+    border: 0;
+    border-radius: 0.5rem;
+    padding: 0.65rem 1rem;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
+.download-pdf-button:hover,
+.download-pdf-button:focus-visible {
+    background-color: var(--color-accent);
+}
+
+.download-pdf-button:focus-visible {
+    outline: 0.1875rem solid var(--color-accent);
+    outline-offset: 0.125rem;
+}
+
+.download-pdf-button:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+/* ซ่อนปุ่มจากภาพที่นำไปสร้าง PDF โดยไม่เปลี่ยนเนื้อหาข่าว */
+.news-card.is-exporting .download-pdf-button {
+    display: none;
+}
+
+/* เน้นคำค้นหาในหัวข้อด้วยสีทองที่อ่านได้ชัด */
+.news-search-highlight {
+    border-radius: 0.2rem;
+    padding: 0.05em 0.12em;
+    background-color: #ffe39a;
+    color: #1d2f40;
+}
