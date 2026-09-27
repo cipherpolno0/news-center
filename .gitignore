@@ -1,0 +1,29 @@
+# ไฟล์ระบบปฏิบัติการ
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ไฟล์ชั่วคราวและ log
+*.log
+*.tmp
+
+# Dependencies และไฟล์ build หากเพิ่มเครื่องมือภายหลัง
+node_modules/
+dist/
+build/
+
+# การตั้งค่าเฉพาะเครื่อง
+.vscode/
+.idea/
+
+# ไฟล์ลับเฉพาะเครื่อง
+.env
+.env.*
+!.env.example
+
+# ไฟล์ส่งออก/สำรองที่ไม่ใช่ source code ของเว็บไซต์
+*.zip
+index-before-css.html
+
+# การตั้งค่าเฉพาะสภาพแวดล้อม
+.codex/
